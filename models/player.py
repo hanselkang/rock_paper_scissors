@@ -1,4 +1,5 @@
 class Player():
 
-    def __init__(self, choose_which)
-        self.choose_which = choose_which
+    def __init__(self, name, choice):
+        self.name = name
+        self.choice = choice

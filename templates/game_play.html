@@ -11,10 +11,23 @@
 <body>
     <form class="form-inline" action="/games" method="post">
         <label for="player">Player Name</label>
-        <input type="player" name="player" id="player>
-
-        <label for="player_choice">Player Choice</label>
-        <input type="player1choice" name="player_choice" id="player_choice">
+        <input type="player" name="player" id="player">
+        
+        <label>
+            <input type="radio" name="player_choice" id="player_choice" value="Rock">
+            <span class="design"></span>
+            <span class="value">Rock</span>
+        </label>
+        <label>
+            <input type="radio" name="player_choice" id="player_choice" value="Paper">
+            <span class="design"></span>
+            <span class="value">Paper</span>
+        </label>
+        <label>
+            <input type="radio" name="player_choice" id="player_choice" value="Scissors">
+            <span class="design"></span>
+            <span class="value">Scissors</span>
+        </label>
 
         <input type="submit" value="Play Game">
     </form>

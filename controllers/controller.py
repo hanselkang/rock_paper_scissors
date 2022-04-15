@@ -26,16 +26,3 @@ def game_play():
         first = list(games.keys())[0]
         second = list(games.keys())[1]
         return result_match(first, second)
-    
-    
-
-# @app.route('/games2')
-# def game_play_2_page():
-#     return render_template('game_play2.html', title="Let's Start", games=games)
-
-# @app.route('/games2', methods=['POST'])
-# def game_play_2():
-#     player2 = request.form['player2']
-#     player2_choice = request.form['player2_choice']
-#     game_turn(player2, player2_choice)
-    

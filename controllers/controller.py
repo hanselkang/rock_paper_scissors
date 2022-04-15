@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect
 from app import app
-from models.game_play import game_turn, result_match, games, game_turn
+from models.game_play import result_route, game_turn, result_match, games, game_turn
 from models.player import *
 from models.game import Game
 from itertools import islice
@@ -10,9 +10,11 @@ from itertools import islice
 def index():
      return render_template('index.html', title='Rock Paper Scissors')
 
+
 @app.route('/games')
 def game_play_1_page():
      return render_template('game_play.html', title="Let's Start", games=games)
+
 
 @app.route('/games', methods=['POST'])
 def game_play():
@@ -26,3 +28,4 @@ def game_play():
         first = list(games.keys())[0]
         second = list(games.keys())[1]
         return result_match(first, second)
+         

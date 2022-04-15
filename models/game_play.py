@@ -19,4 +19,3 @@ def result_match(name1,name2):
         return list(games.keys())[0] + " wins by playing " + games[name1]
 
     return list(games.keys())[1] + " wins by playing " + games[name2]
-

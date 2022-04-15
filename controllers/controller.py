@@ -1,8 +1,12 @@
 from flask import render_template, request, redirect
 from app import app
-from models.game_play import empty_dict, game_turn, result_match, games, game_turn
+from models.game_play import empty_dict, game_turn, result_match, games, game_turn, result_route
 from models.player import *
 from models.game import Game
+
+@app.route('/<player1>/<player2>')
+def game(player1, player2):
+    return result_route(player1,player2)
 
 
 @app.route('/')
@@ -27,5 +31,7 @@ def game_play():
         first = list(games.keys())[0]
         second = list(games.keys())[1]
         result_match(first, second)
-        return render_template('game_result.html', title="Result", games = games, a = result_match(first,second))
+        return render_template('game_result.html', title="Result", games=games, a=result_match(first, second), b=empty_dict(games))
+    
+
        

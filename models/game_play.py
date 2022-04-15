@@ -6,6 +6,19 @@ player2_score = 0
 games = {}
 
 
+def result_route(player1, player2):
+
+    if player1 == player2:
+        return "Draw"
+    elif player1 == "Rock" and player2 == "Scissors":
+        return " Player1 wins by playing " + player1
+    elif player1 == "Scissors" and player2 == "Paper":
+        return " Player1 wins by playing " + player1
+    elif player1 == "Paper" and player2 == "Rock":
+        return " Player1 wins by playing " + player1
+
+    return " Player2 wins by playing " + player2
+
 
 def game_turn(player, choice):
     games[player] = choice

@@ -15,19 +15,18 @@ def game_play_1_page():
      return render_template('game_play.html', title="Let's Start", games=games)
 
 @app.route('/games', methods=['POST'])
-def game_play_1():
-    player1 = request.form['player1']
-    player1_choice = request.form['player1_choice']
-    game_turn(player1, player1_choice)
+def game_play():
+    player = request.form['player']
+    player_choice = request.form['player_choice']
+    game_turn(player, player_choice)
     print(games)
     if len(games) <2:
         return redirect('/games')
     elif len(games) == 2:
-        first = list(games.values())[0]
-        second = list(games.values())[1]
+        first = list(games.keys())[0]
+        second = list(games.keys())[1]
         return result_match(first, second)
-    else:
-        return redirect('/')
+    
     
 
 # @app.route('/games2')

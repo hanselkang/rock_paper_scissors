@@ -11,7 +11,7 @@ def game(player1, player2):
 
 @app.route('/')
 def index():
-    return render_template('index.html', title='Rock Paper Scissors')
+    return render_template('index.html', title='Rock Paper Scissors' )
 
 
 @app.route('/games')

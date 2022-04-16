@@ -8,9 +8,23 @@
         <p>
             <a href="/">Back to main</a>
         </p>
+
+       
+        <a href="/">
+            <img src="{{url_for('static', filename='img/paws.png')}}" width="300">
+        </a>
         <p>
-            <a href="/games">Multi</a>
-            <a href="/single_game">Single vs Computer</a>
+        <h3>Play Again?</h3>
+        <div class="column">
+            <a href="/games">
+                <img src="{{url_for('static', filename='img/multi.png')}}" width="150">
+            </a>
+        </div>
+        <div>
+            <a href="/single_game">
+                <img src="{{url_for('static', filename='img/single.png')}}" width="150">
+            </a>
+        </div>
         </p>
     </footer>
 {% endblock %}

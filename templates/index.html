@@ -1,9 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>
-    Rock Paper Scissors
-</h1>
-<p>Play one player each!</p>
-<p>Don't let your friend see your PAW! 🐱</p>
-<a href="/games">Let's play kitty Rock Paper Scissors!</a>
+<div class="main">
+    <h1>
+        Rock Paper Scissors
+    </h1>
+    <div class="row">
+        <div class="column">
+            <a href="/games">
+                <img src="{{url_for('static', filename='img/multi.png')}}" width="220">
+            </a>
+        </div>
+        <div>
+            <a href="/single_game">
+                <img src="{{url_for('static', filename='img/single.png')}}" width="200">
+            </a>
+        </div>
+        <p>Play One player each</p>
+        <p>Don't let your friend see your PAW🐱</p>
+        <p>Let's play kitty Rock Paper Scissors</p>
+        <a href="https://en.wikipedia.org/wiki/Rock_paper_scissors">What is Rock, Paper, Scissors?</a>
+    </div>
+</div>
 {% endblock %}

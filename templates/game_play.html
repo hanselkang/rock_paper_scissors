@@ -1,25 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
-    <form class="form-inline" action="/games" method="post">
+<form class="form-inline" action="/games" method="post">
+    <p>
         <label for="player">Player Name</label>
-        <input type="text" name="player" id="player">
-        
-        <label>
-            <input type="radio" name="player_choice" id="player_choice" value="Rock">
-            <span class="design"></span>
-            <span class="value">Rock</span>
-        </label>
-        <label>
-            <input type="radio" name="player_choice" id="player_choice" value="Paper">
-            <span class="design"></span>
-            <span class="value">Paper</span>
-        </label>
-        <label>
-            <input type="radio" name="player_choice" id="player_choice" value="Scissors">
-            <span class="design"></span>
-            <span class="value">Scissors</span>
-        </label>
+    </p>
+    <input class="css-input" type="text" name="player" id="player">
+    <br><br>
+    <div>
+    <label class="radio">
+        <input type="radio" name="player_choice" id="player_choice" value="Rock">
+        <img src="{{url_for('static', filename='img/rock.png')}}" width="150" height="200">
+    </label>
+    <label class="radio">
+        <input type="radio" name="player_choice" id="player_choice" value="Paper">
+        <img src="{{url_for('static', filename='img/paper.png')}}" width="150" height="200">
+    </label>
+    <label class="radio">
+        <input type="radio" name="player_choice" id="player_choice" value="Scissors">
+        <img src="{{url_for('static', filename='img/scissors.png')}}" width="150" height="200">
+    </label>
+    </div>
 
-        <input type="submit" value="Play Game">
-    </form>
+    <input class = "btn" type="submit" value="Play Game">
+</form>
 {% endblock %}

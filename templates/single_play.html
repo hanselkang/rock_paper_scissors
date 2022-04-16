@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<form class="form-inline" action="/single_game" method="post">
+    <label for="player">Player Name</label>
+    <input type="text" name="player" id="player">
+
+    <label>
+        <input type="radio" name="player_choice" id="player_choice" value="Rock">
+        <span class="design"></span>
+        <span class="value">Rock</span>
+    </label>
+    <label>
+        <input type="radio" name="player_choice" id="player_choice" value="Paper">
+        <span class="design"></span>
+        <span class="value">Paper</span>
+    </label>
+    <label>
+        <input type="radio" name="player_choice" id="player_choice" value="Scissors">
+        <span class="design"></span>
+        <span class="value">Scissors</span>
+    </label>
+
+    <input type="submit" value="Play Game">
+</form>
+{% endblock %}

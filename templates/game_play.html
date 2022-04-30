@@ -4,23 +4,23 @@
     <p>
         <label for="player">Player Name</label>
     </p>
-    <input class="css-input" type="text" name="player" id="player">
+    <input class="css-input" type="text" name="player" id="player" required>
     <br><br>
-    <div>
-    <label class="radio">
-        <input type="radio" name="player_choice" id="player_choice" value="Rock">
-        <img src="{{url_for('static', filename='img/rock.png')}}" width="150" height="200">
-    </label>
-    <label class="radio">
-        <input type="radio" name="player_choice" id="player_choice" value="Paper">
-        <img src="{{url_for('static', filename='img/paper.png')}}" width="150" height="200">
-    </label>
-    <label class="radio">
-        <input type="radio" name="player_choice" id="player_choice" value="Scissors">
-        <img src="{{url_for('static', filename='img/scissors.png')}}" width="150" height="200">
-    </label>
+    <div class="button">
+        <label class="radio">
+            <input type="radio" name="player_choice" id="player_choice" value="Rock">
+            <img src="{{url_for('static', filename='img/rock.png')}}" width="150" height="200">
+        </label>
+        <label class="radio">
+            <input type="radio" name="player_choice" id="player_choice" value="Paper">
+            <img src="{{url_for('static', filename='img/paper.png')}}" width="150" height="200">
+        </label>
+        <label class="radio">
+            <input type="radio" name="player_choice" id="player_choice" value="Scissors">
+            <img src="{{url_for('static', filename='img/scissors.png')}}" width="150" height="200">
+        </label>
     </div>
 
-    <input class = "btn" type="submit" value="Play Game">
+    <input class="btn" type="submit" value="Play Game">
 </form>
 {% endblock %}

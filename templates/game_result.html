@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-    <div>
+    <div class="result">
         {{ a }}
-        {{ b }}
     </div>
     <footer>
         <p>
@@ -25,6 +24,7 @@
                 <img src="{{url_for('static', filename='img/single.png')}}" width="150">
             </a>
         </div>
+        <div class="out">{{ b }}</div>
         </p>
     </footer>
 {% endblock %}

@@ -11,6 +11,13 @@ h1 {
     text-align: center;
 }
 
+.result {
+    text-align: center;
+    font-size: 30px;
+    font-style: italic
+    
+}
+
 .row {
     margin : 50px;
 }
@@ -97,7 +104,18 @@ a:active {
 /* CHECKED STYLES */
 [type=radio]:checked+img {
     outline: 4px solid grey;
+    outline-offset: 10px;
 }
+
+.button {
+    display : flex;
+    flex-direction: row;
+    flex-flow :center;
+    gap : 40px;
+    padding: 30px;
+    justify-content: center;
+}
+
 
 .btn {
     -webkit-border-radius: 25;
@@ -114,4 +132,8 @@ a:active {
 .btn:hover {
     background: #7d7d7d;
     text-decoration: none;
+}
+
+.out {
+    visibility: hidden;
 }

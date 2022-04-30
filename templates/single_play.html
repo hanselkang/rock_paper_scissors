@@ -4,10 +4,10 @@
     <p>
         <label for="player">Player Name</label>
     </p>
-    <input class="css-input" type="text" name="player" id="player">
+    <input class="css-input" type="text" name="player" id="player" required>
     <br><br>
-    <div>
-        <label class="radio">
+    <div class="button">
+        <label class="radio" >
             <input type="radio" name="player_choice" id="player_choice" value="Rock">
             <img src="{{url_for('static', filename='img/rock.png')}}" width="150" height="200">
         </label>

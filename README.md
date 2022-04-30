@@ -5,5 +5,5 @@
 ### Play Cat Version of Rock Paper Scissors
 ### Drawings by me
 
-## Feetures
-* Provide Multiplay and Single Play vs Catputer
+## Features
+* Provide Multiplay or Single Play vs Catputer
